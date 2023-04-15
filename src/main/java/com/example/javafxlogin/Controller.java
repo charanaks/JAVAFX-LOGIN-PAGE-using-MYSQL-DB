@@ -1,9 +1,9 @@
 package com.example.javafxlogin;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Alert;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Window;
 
@@ -14,7 +14,7 @@ public class Controller {
     @FXML
     TextField username;
     @FXML
-    TextField password1;
+    PasswordField password1;
     @FXML
     Button loginButton;
 
@@ -30,7 +30,7 @@ public class Controller {
         }
 
         if (password1.getText().isEmpty()) {
-            showAlert(Alert.AlertType.ERROR, owner, "Form Error!", "Please enter your email id");
+            showAlert(Alert.AlertType.ERROR, owner, "Form Error!", "Please enter your Password");
             return;
         }
         String username1 = username.getText();
